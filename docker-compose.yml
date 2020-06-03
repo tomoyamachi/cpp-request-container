@@ -1,8 +1,7 @@
 version: "3"
 
 services:
-  clion:
-    container_name: clion
+  app:
     build: .
     ports:
       - "2222:22"
@@ -12,4 +11,4 @@ services:
       - seccomp:unconfined
       - apparmor:unconfined
     volumes:
-      - .:/code
+      - .:/app

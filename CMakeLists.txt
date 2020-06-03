@@ -32,5 +32,5 @@ endif()
 add_subdirectory(opt)
 
 add_executable(example example.cpp)
-target_link_libraries(example ${CPR_LIBRARIES})
+target_link_libraries(example ${CPR_LIBRARIES}) # nlohmann_json::nlohmann_json)
 include_directories(${CPR_INCLUDE_DIRS} ${JSON_INCLUDE_DIRS})
