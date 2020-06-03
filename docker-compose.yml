@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  clion:
+    container_name: clion
+    build: .
+    ports:
+      - "2222:22"
+    cap_add:
+      - "sys_ptrace"
+    security_opt: # options needed for gdb debugging
+      - seccomp:unconfined
+      - apparmor:unconfined
+    volumes:
+      - .:/code
